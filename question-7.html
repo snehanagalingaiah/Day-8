@@ -1,0 +1,131 @@
+<!--Design the form shown in the link-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin:0px;
+        }
+
+        .header{
+            background-color: rgb(228, 72, 72);
+            height:60px;
+            text-align: center;
+            font-size:30px;
+            line-height: 2;
+
+        }
+
+        .form{
+            margin-left: 15px;
+            margin-top: 15px;
+        }
+
+        input[type="text"] {
+            border-top:none;
+            border-left:none;
+            border-right:none;
+            border-bottom:3px solid black;
+        }
+
+        .name{
+            line-height:9;
+            
+        }
+
+        .name input{
+            position:relative;
+            top:-2em;
+            left:-5.5em;
+            width:14%;
+        }
+        
+        .address{
+        position:relative;
+        top:-3em;
+        }
+
+        .address label{
+            display:block;
+           line-height: 2
+        }
+
+        .address input{
+            width:33.3%
+        }
+
+        .city-state{
+            position:relative;
+            top:-2em;
+        }
+       
+        .city-state input{
+            position:relative;
+            top:-2em;
+            left:-2.5em;
+            width:9.5%
+        }
+
+        .subscription{
+             position:relative;
+             top:-2em;
+             width:1000;
+        }
+
+        .info{
+            position:relative;
+            top:-.7em;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <p>Yes! I want to subscribe to <i>Mag-O-Zine</i></p>
+    </div>
+
+    <div class="form">
+        <form>
+            
+            <div class="name">
+            <label for="fname">First Name <input type="text" id="fname" name="fname" value="Joe"></label>           
+            <label for="lname">Last Name<input type="text" id="lname" name="lname" value="Schindler"></label> 
+            <br>   </div>
+
+         
+             <div class="address">     
+                <input type="text" id="address" name="address" value="1001 Washington Street"> 
+            <label for="address">Address </label>  
+             </div><br>
+
+             <div class="city-state">
+            <label for="city">City <input type="text" id="city" name="city" value="Austin Town"></label>
+            <label for="state">State <input type="text" id="state" name="state" value="CA"></label>
+            <label for="zip">Zip  <input type="text" id="zip" name="zip" value="99999"><br>
+            </label><br>
+             </div>
+
+            <p class="subscription">Subscribe for:
+            <input type="radio" id="subscription" name="subscription" value="1year" checked="checked">
+            <label for="subscription">1 year($19.95)</label>
+            <input type="radio" id="subscription" name="subscription" value="2 years">
+            <label for="subscription">2 years($35.00)</label></p>
+
+            <p class="info">Send me more information about:</p>
+            <input type="checkbox" id="information" name="information" value="Computer-zine" checked="checked">
+            <label for="information">Computer-zine</label><br>
+            <input type="checkbox" id="information" name="information" value="Fishing-zine">
+            <label for="information">Fishing-zine</label><br>
+            <input type="checkbox" id="information" name="information" value="Cat-O-zine" checked="checked">
+            <label for="information">Cat-O-zine</label><br>
+
+            </form>
+    </div>
+</body>
+</html>

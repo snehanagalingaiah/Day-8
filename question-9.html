@@ -1,0 +1,146 @@
+
+
+<!--QUESTION ---- Write HTML input tags snippet to show default values for all Form elements.-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="question-11.css">
+</head>
+<body>
+
+    <div class="topnav">
+        <div class ="left">
+        <input type="color" id="colorpicker" name="colorpicker" value="#8c8fc6">
+        <label for="head">Choose form background color</label><br>
+        </div>
+
+        <a href="#home">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+      </div>
+
+<div id="top-container" class="top-container">
+    <div class="logo">
+    <h1 style="padding-top:20px">M&M Sharebrokers</h1>
+    <h3>Register with us</h3>
+    </div>
+
+    <div class="searchsite">
+    <label for="site-search">Search the site:</label>
+    <input type="search" id="site-search" name="site-search" value="Search..">
+    <button>Search</button>
+    </div>
+    
+    <div class="container">
+        <form>
+ 
+            <label for = "fname"> Name</label>
+            <input type="text" id="fname" placeholder="Your name" value="John"><br>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Your email address" pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$" value="Johndoe@email.com"><br>
+
+            <label for="password">Password</label><br>
+            <input type="password" id="password" placeholder="set password" value="123456"><br>
+
+            <p>Please select your employment type:</p>
+            <input type="radio" id="salaried" name="emp_type" value="salaried" checked="checked">
+            <label for="salaried">Salaried</label>
+            <input type="radio" id="business" name="emp_type" value="business">
+            <label for="business">Own Business</label><br>
+
+            <p class="info">Please select your product:</p>
+            <input type="checkbox" id="information" name="information" value="Shares and Corporate bonds" checked="checked">
+            <label for="information">Shares and Corporate bonds</label><br>
+            <input type="checkbox" id="information" name="information" value="Mutual Funds" checked="checked">
+            <label for="information">Mutual Funds</label><br>
+            <input type="checkbox" id="information" name="information" value="Futures and Options" >
+            <label for="information">Futures and Options</label><br>
+
+            <input type="hidden" id="custId" name="custId" value="3487">
+
+
+            <label for="inv">Range of investments(between 1 lakh and 50 lakh):</label><br>
+            <input type="range" id="inv" name="inv" min="1" max="50" value="5"><br>
+
+            <label for="meeting-time">Choose a time for your product booking:</label>
+            <input type="datetime-local" id="booking-time" name="booking-time" value="2023-03-01T00:00" min="2023-03-01T00:00"><br>
+
+            <label for="dob">Date of birth:</label>
+            <input type="date" id="dob" name="dob" value="1996-07-13"><br>
+
+            <label for="Mobile">Contact number</label><br>
+            <input type="tel" id="Mobile" name="Mobile" value="9482169452" patten="^[0-9]{10}"><br>
+
+            <!--file input type doesn't take default values-->
+            <label for="idcard">Upload PAN card:</label>
+            <input type="file" id="idcard" name="idcard"><br>
+
+            <label for="quantity">Number of demats you already hold</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="5" value="3"><br>
+
+            <label for="sm">Share your social media link:</label>
+            <input type="url" id="sm" name="sm" value="john"><br>
+
+            <input type="submit" value="Submit">
+            <input type="reset"  value="Reset">
+            
+            
+           
+        </form>
+        
+   </div>
+
+   <div class="ContactForm">
+    <fieldset>
+       <legend>Contact Us</legend>
+       <label>Choose your concern</label> 
+       <select name="Concern">
+        <option value="none" selected>None</option>  <!--this is the default value selected-->
+        <optgroup label="Mutual Funds">
+          <option> MF Buying</option>
+          <option> MF Selling</option>
+          <option> MF Product Enquiry</option>
+        </optgroup>
+        <optgroup label="Shares">
+          <option>Shares Buying</option>
+          <option>Shares Selling</option>
+          <option>Shares Product Enquiry</option>
+        </optgroup>
+        <optgroup label="Futures & Options">
+          <option>F&O Buying</option>
+          <option>F&O Selling</option>
+          <option>F&O Product Enquiry</option>
+        </optgroup>
+        </select>
+        <p>
+        <label>Your concern:</label>
+        </p>
+        <p>
+        <textarea name="Concern_text" rows="20" cols="40">My concern is..
+        </textarea>
+        </p>
+        <input type="button" onclick="alert('You will receive a call from us')" value="Contact">
+    </fieldset>
+   </div>
+  
+</div>
+
+<script>
+    const colorpicker = document.getElementById("colorpicker");
+    colorpicker.addEventListener("input", changeBackground);
+
+    function changeBackground(event) {
+     document.getElementById("top-container").style.background=event.target.value;
+    }
+</script>
+</body>
+</html>
